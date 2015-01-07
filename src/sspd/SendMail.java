@@ -20,9 +20,9 @@ import javax.mail.internet.MimeMessage;
  */
 public class SendMail {
     
-    public void Send()
+    public void Send(String to,String isiPesan)
     {
-        final String username = "juliogema20@gmail.com";
+        final String username = "juliogema20";
 		final String password = "Thesuccesisnear";
  
 		Properties props = new Properties();
