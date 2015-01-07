@@ -7,6 +7,7 @@
 package sspd;
 import java.util.Properties;
  
+import javax.mail.*;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
@@ -14,13 +15,27 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.activation.*;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Multipart;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 /**
  *
  * @author julio
  */
 public class SendMail {
     
-    public void Send(String to)
+    public void Send(String To,String file)
     {
         final String username = "juliogema20";
 		final String password = "Thesuccesisnear";
@@ -43,12 +58,21 @@ public class SendMail {
 			Message message = new MimeMessage(session);
 			message.setFrom(new InternetAddress("juliogema20@gmail.com"));
 			message.setRecipients(Message.RecipientType.TO,
-				InternetAddress.parse("julid.gema.tifd13@polban.ac.id"));
+				InternetAddress.parse("To"));
 			message.setSubject("Testing Subject");
-			message.setText("Dear Mail Crawler,"
-				+ "\n\n No spam to my email, please!");
- 
-			Transport.send(message);
+			message.setText(""
+				+ "");
+                         // Part two is attachment
+//         messageBodyPart = new MimeBodyPart();
+//         String filename = "/home/manisha/file.txt";
+//         DataSource source = new FileDataSource(filename);
+//         messageBodyPart.setDataHandler(new DataHandler(source));
+//         messageBodyPart.setFileName(filename);
+//         multipart.addBodyPart(messageBodyPart);
+//
+//         // Send the complete message parts
+//         message.setContent(multipart);
+//			Transport.send(message);
  
 			System.out.println("Done");
  
