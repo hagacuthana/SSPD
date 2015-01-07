@@ -20,7 +20,7 @@ import javax.mail.internet.MimeMessage;
  */
 public class SendMail {
     
-    public void Send(String to,String isiPesan,String from)
+    public void Send(String to,String isiPesan)
     {
         final String username = "juliogema20";
 		final String password = "Thesuccesisnear";
